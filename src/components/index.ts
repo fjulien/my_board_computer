@@ -1,2 +1,3 @@
-export * from './reactJs/common/NavigationBar';
-export * from './reactJs/common/FooterBar';
+export * from './navigation-bar/NavigationBar';
+export * from './footer-bar/FooterBar';
+export * from './terminatest/Terminatest';
