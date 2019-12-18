@@ -45,7 +45,7 @@
 
 1. Clone the project :
 ``` Shell
-git clone https://github.com/fjulien/2048-game.git
+git clone https://github.com/fjulien/my_board_computer.git
 ```
 2. Install project :
 ``` Shell

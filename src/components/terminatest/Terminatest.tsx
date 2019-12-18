@@ -2,8 +2,8 @@ import React from 'react';
 import { Row, Col } from 'reactstrap';
 import './Terminatest.scss';
 import { TestMaker } from './test-maker/TestMaker';
-import { TestThread } from './test-thread/TestThread';
-import { ViewTest } from './view-test/ViewTest';
+import { TestThread } from './test-threads/TestThread';
+import { ViewTests } from './view-test/ViewTests';
 
 export const Terminatest = () => {
   return (
@@ -16,7 +16,7 @@ export const Terminatest = () => {
           <TestThread />
         </Col>
         <Col xs='4'>
-          <ViewTest />
+          <ViewTests />
         </Col>
       </Row>
     </article>

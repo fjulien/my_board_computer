@@ -1,10 +1,10 @@
 import React from 'react';
-import './ViewTest.scss';
+import './ViewTests.scss';
 import { Container } from 'reactstrap';
 
-export const ViewTest = () => {
+export const ViewTests = () => {
   return (
-    <Container className="ViewTest">
+    <Container className="ViewTests">
       <h4>ViewTest</h4>
     </Container>
   );
