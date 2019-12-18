@@ -2,6 +2,9 @@
 
 ## Architecture
 
+
+<img src="https://github.com/fjulien/my_board_computer/blob/master/image-read-me/diagram.svg?sanitize=true">
+
 >node_modules
 >
 >public
