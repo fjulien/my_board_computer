@@ -1,4 +1,6 @@
-export const chooseFunctions = (choosed:String) => {
+import { Action } from '../../store/terminatest';
+
+export const chooseFunctions = (choosed:Action|undefined) => {
   console.log(choosed)
 };
     

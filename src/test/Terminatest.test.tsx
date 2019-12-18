@@ -1,0 +1,9 @@
+import React from 'react';
+import { render } from '@testing-library/react';
+import {Terminatest} from '../components/terminatest/Terminatest';
+
+test('renders learn react link', () => {
+  const { getByText } = render(<Terminatest />);
+  const linkElement = getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});

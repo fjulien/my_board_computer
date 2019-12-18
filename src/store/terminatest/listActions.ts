@@ -1,22 +1,22 @@
-interface Action {
-  title:String;
-  evenments:Array<Function>;
+export interface Action {
+  title:string;
+  inputsAttachment:Array<Function>;
 }
 
 export const listActions:Array<Action> = [{
       title: 'Go to web page',
-      evenments: [],
+      inputsAttachment: [],
     },{
       title: 'Complete input',
-      evenments: [],
+      inputsAttachment: [],
     },{
       title: 'Click on element',
-      evenments: [],
+      inputsAttachment: [],
     },{
       title: 'Waitting',
-      evenments: [],
+      inputsAttachment: [],
     },{
       title:  'Screen shot',
-      evenments: [],
+      inputsAttachment: [],
     }
-  ]
+  ];
