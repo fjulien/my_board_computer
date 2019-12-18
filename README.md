@@ -12,23 +12,29 @@
 >
 >-/components
 >
->-/containers-redux
+>-/-/footer-bar
+>
+>-/-/navigation-bar
+>
+>-/-/terminatest
+>
+>-/-/-/inputs
+>
+>-/-/-/test-maker
+>
+>-/-/-/test-threds
+>
+>-/-/-/view-test
 >
 >-/constants
 >
 >-/media
->
->-/-/audios
 >
 >-/-/fonts
 >
 >-/-/images
 >
 >-/store
->
->-/-/gameBoard
->
->-/-/user
 >
 >-/test
 
@@ -37,7 +43,7 @@
 - ReactJs with TypeScript and Hooks
 - Use TDD (Type-Driven Development)
 - Use TDD (Test-Driven Development) for unit tests
-- SCSS preprocessor
+- SCSS preprocessor and CSS grid
 - Reducer (the front backend)
 - Bootstrap 
 
@@ -63,7 +69,7 @@ Automatically the project starts in this url => [http://localhost:3000](http://l
 npm run test
 ```
 
-#### Remember
+#### Me remember
 ```
 npm install puppeteer --unsafe-perm=true --allow-root
 ```

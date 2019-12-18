@@ -1,6 +1,17 @@
 .Terminatest {
-  .container{
-    padding-top: 10px;
-    padding-bottom: 10px;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-areas: 'TestMaker TestThread ViewTests';
+  &>article{
+    padding: 10px;
+  }
+  @media (max-width: 600px) {
+    grid-template-areas: 
+    'TestMaker'
+    'TestThread' 
+    'ViewTests';
+    grid-template-columns: 90% ;
+    grid-row-gap: 20px;
   }
 }
