@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
 import { FormGroup, Label } from 'reactstrap';
-import { chooseFunctions } from '../../../action/terminatest/';
-import { listActions, Action } from '../../../store/terminatest';
+import { chooseFunctions, listActions, Action } from '../../../store/terminatest/';
+import { connect } from "react-redux";
+import { AppState } from "../../../store/allReducers";
 
+interface Props{
+  chooseFunctionsRedux:Function;
+}
 
+const InputSelectorFunctions = (props:Props) => {
 
-export const InputSelectorFunctions = () => {
-
-  const [desableFirstOption, setDesableFirstOption] = useState(false);
+  const [desableFirstOption, setDesableFirstOption] = useState<boolean>(false);
 
   const handleAddrTypeChange = (e:any) => {
     setDesableFirstOption(true)
     if(!(e.target.value === "undefined")){
-      const actionFound:Action|undefined = listActions.find((action:Action):Boolean=> action.title === e.target.value )
-      chooseFunctions(actionFound);
+      const actionFound:Action = listActions.find((action:Action):Boolean=> action.title === e.target.value) || {title:"",inputsAttachment:[]};
+      props.chooseFunctionsRedux(actionFound);
     }     
   }
 
@@ -34,3 +37,12 @@ export const InputSelectorFunctions = () => {
   </FormGroup>
   );
 }
+
+const mapStateToProps = (state: AppState) => ({
+  action: state.actionReduce,
+});
+
+export default connect(
+  mapStateToProps,
+  { chooseFunctionsRedux: chooseFunctions }
+)(InputSelectorFunctions);
