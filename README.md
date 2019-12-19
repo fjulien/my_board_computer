@@ -13,47 +13,49 @@
 
 [Schema url](www.diagram.codes/d/sequence/alias%20mt%3D%22Test%20Maker%20(Actions)%22%0Aalias%20tt%3D%22Thred%20Test%20(Test)%22%0Aalias%20vt%3D%22View%20Test%22%0Aalias%20f%3D%22Form%20action%20(in%20test%20maker)%22%0A%0Amt%3D%3Emt%3A%20%22Create%20first%20object%20Test%22%20%0Amt-%3Ef%3A%20%22Create%20new%20Action%22%0Af--%3Ef%3A%20%22make%20the%20action%22%0Af-%3Ett%3A%20%22Send%20new%20action%20in%20Test%22%20%0Att-%3Ef%3A%20%22Edit%20action%22%0Att--%3Ett%3A%20%22Delete%20action%20in%20Test%22%0Att-%3Evt%3A%20%22Start%20test%22%0Avt--%3Evt%3A%20%22View%20test's%20actions%20success%20or%20fail%22%0Avt--%3Evt%3A%20%22Bilan%22%0Amt-%3Ef%3A%20%22Add%20new%20action%20in%20Test%22%20%0A%0A%23%3D%3E%0A%23--%3E%0A%0A)
 
->node_modules
->
->public
->
->src
->
->-/components
->
->-/-/footer-bar
->
->-/-/navigation-bar
->
->-/-/terminatest
->
->-/-/-/inputs
->
->-/-/-/test-maker
->
->-/-/-/test-threds
->
->-/-/-/view-test
->
->-/constants
->
->-/media
->
->-/-/fonts
->
->-/-/images
->
->-/store
->
->-/-/terminatest
->
->-/-/-/action
->
->-/-/-/reducer
->
->-/-/-/type
->
->-/test
+```
+|node_modules
+|
+|public
+|
+|`+SRC
+| |
+| |`+components
+| | |
+| | |footer-bar
+| | |
+| | |navigation-bar
+| | |
+| | |`+terminatest
+| | | |
+| | | |`+inputs
+| | | | |
+| | | | |test-maker
+| | | | |
+| | | | |test-threds
+| | | | |
+| | | | |view-test
+| |
+| |constants
+| |
+| |`+media
+| | |
+| | |fonts
+| | |
+| | |images
+| |
+| |`+store
+| | |
+| | |`+terminatest
+| | | |
+| | | |action
+| | | |
+| | | |reducer
+| | | |
+| | | |type
+| | 
+| |test
+```
 
 ## Technologies
 
