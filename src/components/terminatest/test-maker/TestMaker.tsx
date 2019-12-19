@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Form } from 'reactstrap';
 import InputSelectorFunctions from '../inputs/InputSelectorFunctions';
 import { connect } from "react-redux";
@@ -14,17 +14,12 @@ interface Props{
 
 const TestMaker = (props:Props) => {
 
-  const [formMakerTest] = useState<Array<string>>(props.action.inputsAttachment);
-
   return (
     <article className="TestMaker">
       <h4>TestMaker</h4>
       <Form>
         <InputSelectorFunctions />
-        {formMakerTest.length === 0
-        ? ""
-        : props.action.title
-        }
+        {props.action.inputsAttachment.map((input:Function, index:number):JSX.Element=><div key={index}>{input()}</div>)}
       </Form>
     </article>
   );

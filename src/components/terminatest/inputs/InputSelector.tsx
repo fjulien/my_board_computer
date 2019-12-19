@@ -4,8 +4,8 @@ import { FormGroup, Label, Input } from 'reactstrap';
 export const InputSelector = () => {
   return (
     <FormGroup>
-      <Label htmlFor="exampleText">Text Area
-        <Input type="textarea" name="text" id="exampleText" />
+      <Label htmlFor="Selector">Selector
+        <Input type="textarea" name="Selector" id="Selector" />
       </Label>
     </FormGroup>
   );

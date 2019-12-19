@@ -2,7 +2,7 @@ import { Action } from '../';
 
 export interface ActionInterface {
   title:string;
-  inputsAttachment:Array<String>;
+  inputsAttachment:Array<()=>JSX.Element>;
 }
 
 export const CHOOSE_ACTION = "CHOOSE_ACTION";

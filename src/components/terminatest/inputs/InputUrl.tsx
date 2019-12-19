@@ -4,8 +4,8 @@ import { FormGroup, Label, Input } from 'reactstrap';
 export const InputUrl = () => {
   return (
     <FormGroup>
-      <Label htmlFor="exampleEmail">Email
-        <Input type="url" name="email" id="exampleEmail" placeholder="with a placeholder" />
+      <Label htmlFor="Url">Url
+        <Input type="url" name="Url" id="Url" />
       </Label>
    </FormGroup>
   );

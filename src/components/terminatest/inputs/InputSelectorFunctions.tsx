@@ -13,7 +13,7 @@ const InputSelectorFunctions = (props:Props) => {
   const [desableFirstOption, setDesableFirstOption] = useState<boolean>(false);
 
   const handleAddrTypeChange = (e:any) => {
-    setDesableFirstOption(true)
+    setDesableFirstOption(true);
     if(!(e.target.value === "undefined")){
       const actionFound:Action = listActions.find((action:Action):Boolean=> action.title === e.target.value) || {title:"",inputsAttachment:[]};
       props.chooseFunctionsRedux(actionFound);
