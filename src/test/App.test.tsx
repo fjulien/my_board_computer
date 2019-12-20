@@ -14,15 +14,12 @@ describe('App', () => {
     expect(true).toBe(true);
   });
 
-  test('Home page', async () => {
+  test('Home page with navbar and footer', async () => {
     page = await browser.newPage();
     await page.goto('http://localhost:3000/');
-    expect(page.url()).toBe( 'http://localhost:3000/');
-        await page.on('response', async (response) => {   
-        if (response.url() === 'http://localhost:3000/' ){
-        expect(response.status()).toBe(200);
-      }
-    });
+    const app = await page.$eval(".App", (element) => element.innerHTML);
+    expect(app).toMatch('class="FooterBar"');
+    expect(app).toMatch('class="navbar');
   },3000);
 });
 /*
