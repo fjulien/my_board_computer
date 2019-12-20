@@ -1,5 +1,5 @@
-import { ActionInterface, TestInterface } from '../';
+import { ActionInterface, TestFunctionalInterface } from '../';
 
-export class Test implements TestInterface {
+export class TestFunctional implements TestFunctionalInterface {
   action:Array<ActionInterface>=[];
 }
