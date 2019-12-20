@@ -21,6 +21,7 @@ describe('App', () => {
     expect(app).toMatch('class="FooterBar"');
     expect(app).toMatch('class="navbar');
   },3000);
+  
 });
 /*
 describe('Module access', () => {
