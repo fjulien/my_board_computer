@@ -1,25 +1,40 @@
-import React from 'react';
+import React, { SyntheticEvent } from 'react';
 import { Form } from 'reactstrap';
 import InputSelectorFunctions from '../inputs/InputSelectorFunctions';
 import { connect } from "react-redux";
 import { AppState } from "../../../store/allReducers";
-import { Action } from '../../../store/terminatest/';
+import { Action, addActionInToTest } from '../../../store/terminatest/';
 
 
 import './TestMaker.scss';
 
-interface Props{
-  action:Action;
+interface Props {
+  action: Action;
+  addActionInToTestRedux: Function;
 }
 
-const TestMaker = (props:Props) => {
+const TestMaker = (props: Props) => {
+
+  const addActionInTest = (event: SyntheticEvent): void => {
+    const { addActionInToTestRedux, action } = props;
+    event.preventDefault();
+    
+    addActionInToTestRedux(action.inputsAttachment);
+  }
 
   return (
     <article className="TestMaker">
       <h4>TestMaker</h4>
-      <Form>
+      <Form onSubmit={(event: SyntheticEvent): void => addActionInTest(event)}>
         <InputSelectorFunctions />
-        {props.action.inputsAttachment.map((input:Function, index:number):JSX.Element=><div key={index}>{input()}</div>)}
+        <ul>
+          {props.action.inputsAttachment.map((input: Function, index: number): JSX.Element => <li key={index}>{input()}</li>)}
+        </ul>
+        <input
+          type='submit'
+          value='Add action'
+          className='submit'
+        />
       </Form>
     </article>
   );
@@ -31,5 +46,5 @@ const mapStateToProps = (state: AppState) => ({
 
 export default connect(
   mapStateToProps,
-  {}
+  { addActionInToTestRedux: addActionInToTest }
 )(TestMaker);

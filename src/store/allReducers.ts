@@ -1,5 +1,6 @@
   
-import { actionReduce } from './terminatest/reducer/Actions'
+import { actionReduce } from './terminatest/reducer/Actions';
+import { testReduce } from './terminatest/reducer/Test'
 
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunkMiddleware from "redux-thunk";
@@ -7,7 +8,8 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 
 const rootReducer = combineReducers({
-  actionReduce
+  actionReduce,
+  testReduce
 });
 
 export type AppState = ReturnType<typeof rootReducer>;

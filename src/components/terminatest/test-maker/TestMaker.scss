@@ -1,4 +1,8 @@
 .TestMaker{
     grid-area: TestMaker;
     background-color: grey;
+    ul{
+        padding: 0px;
+        list-style-type: none;
+    }
 }

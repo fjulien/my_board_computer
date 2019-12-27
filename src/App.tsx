@@ -1,4 +1,3 @@
-import './App.scss';
 
 import React, { FC, ReactElement } from 'react';
 import { Switch, Route } from 'react-router-dom';
@@ -6,7 +5,9 @@ import {
   NavigationBar,
   FooterBar,
   Terminatest,
-  } from './components/';
+} from './components/';
+
+import './App.scss';
 
 const App: FC = (): ReactElement => {
   return (

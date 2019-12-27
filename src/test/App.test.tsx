@@ -1,9 +1,14 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react'
 import App from '../App';
+import { unmountComponentAtNode } from "react-dom";
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+afterEach(cleanup)
+
+describe('This will test MyComponent', () => {
+  test('renders message', () => {
+    const { getByText } = render(<App />);
+
+    expect(getByText('Hello World!'));
+  });
 });
