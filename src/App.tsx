@@ -5,6 +5,7 @@ import {
   NavigationBar,
   FooterBar,
   Terminatest,
+  TomorrowMustToDo,
 } from './components/';
 
 import './App.scss';
@@ -15,6 +16,7 @@ const App: FC = (): ReactElement => {
       <NavigationBar />
       <Switch>
         <Route path="/terminatest" exact component={Terminatest} />
+        <Route path="/tomorrow-must-to-do" exact component={TomorrowMustToDo} />
       </Switch>
       <FooterBar />
     </div>

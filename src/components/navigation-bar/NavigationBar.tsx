@@ -38,8 +38,8 @@ export const NavigationBar = () => {
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <Link to="/statistique">
-                      Statistique
+                    <Link to="/tomorrow-must-to-do">
+                    Tomorrow must to do
                       </Link>
                   </DropdownItem>
                 </DropdownMenu>
