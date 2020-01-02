@@ -1,7 +1,14 @@
+@import "../../index.scss";
+
 .tomorrow-must-to-do {
   display: grid;
   justify-content: space-evenly;
   margin-top: 15px;
+  .button-clean-all{
+    border: solid 1px $grey;
+    background-color: red;
+    border-radius: 7px
+  }
   @font-face {
     font-family: neon;
     src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
