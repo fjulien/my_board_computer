@@ -1,24 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-import { render, cleanup } from '@testing-library/react'
-import App from '../App';
-import { unmountComponentAtNode } from "react-dom";
-
-afterEach(cleanup)
-
-describe('This will test MyComponent', () => {
-  test('renders message', () => {
-    const { getByText } = render(<App />);
-
-    expect(getByText('Hello World!'));
-  });
-=======
 const puppeteer = require('puppeteer');
 
 let browser, page;
 beforeAll(async () => {
   browser = await puppeteer.launch({executablePath: './chrome-win/chrome.exe'});
->>>>>>> a3f7bdce7c653b4f9c241f739ca3515986e2f3de
 });
 
 afterAll(async () =>{

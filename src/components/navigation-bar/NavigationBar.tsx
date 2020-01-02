@@ -32,14 +32,18 @@ export const NavigationBar = () => {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    <Link to="/terminatest">
+                    <Link
+                      onClick={toggle}
+                      to="/terminatest">
                       Termina-test
                       </Link>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <Link to="/tomorrow-must-to-do">
-                    Tomorrow must to do
+                    <Link
+                      onClick={toggle}
+                      to="/tomorrow-must-to-do">
+                      Tomorrow must to do
                       </Link>
                   </DropdownItem>
                 </DropdownMenu>
